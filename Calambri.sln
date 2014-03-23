@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Core", "Calambri.Core\Calambri.Core.csproj", "{3218E4F0-87B6-4B8C-97A1-81A294E70C07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Interfaces", "Calambri.Interfaces\Calambri.Interfaces.csproj", "{978A9842-F471-40BD-8CDF-CE8CBC1A29C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Tests", "Calambri.Tests\Calambri.Tests.csproj", "{41D96BFA-C9D5-4B4D-B6FD-3097B7B1E9DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3218E4F0-87B6-4B8C-97A1-81A294E70C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3218E4F0-87B6-4B8C-97A1-81A294E70C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3218E4F0-87B6-4B8C-97A1-81A294E70C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{978A9842-F471-40BD-8CDF-CE8CBC1A29C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978A9842-F471-40BD-8CDF-CE8CBC1A29C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978A9842-F471-40BD-8CDF-CE8CBC1A29C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978A9842-F471-40BD-8CDF-CE8CBC1A29C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41D96BFA-C9D5-4B4D-B6FD-3097B7B1E9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41D96BFA-C9D5-4B4D-B6FD-3097B7B1E9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41D96BFA-C9D5-4B4D-B6FD-3097B7B1E9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41D96BFA-C9D5-4B4D-B6FD-3097B7B1E9DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
