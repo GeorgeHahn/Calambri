@@ -1,64 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Calambri.Interfaces;
 using LibUsbDotNet;
 using LibUsbDotNet.Main;
 
 namespace Calambri.Core
 {
-    public struct Color
-    {
-        public byte R;
-        public byte G;
-        public byte B;
-
-        public Color(byte R, byte G, byte B)
-        {
-            this.R = R;
-            this.G = G;
-            this.B = B;
-        }
-    }
-
-    public abstract class IFadecandyDevice
-    {
-        /// <summary>
-        /// Serial number of this device
-        /// </summary>
-        public string SerialNumber { get; set; }
-
-        // TODO: SetPixel probably needs some sort of locking mechanism so the underlying code knows when to hold transmissions to avoid frame tearing
-
-        /// <summary>
-        /// Get pixel from chain
-        /// </summary>
-        /// <param name="pixelNum"></param>
-        /// <returns></returns>
-        public abstract Color GetPixel(int pixelNum);
-
-        /// <summary>
-        /// Set color of pixel on the chain
-        /// </summary>
-        /// <param name="pixelNum"></param>
-        /// <param name="c"></param>
-        public abstract void SetPixel(int pixelNum, Color c);
-
-        /// <summary>
-        /// Send current buffer to device
-        /// </summary>
-        public abstract void Commit();
-
-        /// <summary>
-        /// Number of pixels this device controls
-        /// </summary>
-        public int PixelCount { get; internal set; }
-    }
-
     public class USBFadecandy: IFadecandyDevice
     {
         private byte[] activeBuffer;
@@ -67,12 +15,10 @@ namespace Calambri.Core
         private UsbDevice fcdevice;
         private UsbEndpointWriter writer;
         
-        public USBFadecandy(int pixelCount = 0, string serialNumber = "")
+        public USBFadecandy(int pixelCount = 0, string serialNumber = "") : base(pixelCount)
         {
             if(pixelCount > 512)
                 throw new ArgumentOutOfRangeException("pixelCount");
-
-            PixelCount = pixelCount;
 
             var packets = pixelCount/21; // Can fit 21 pixels into each packet
             activeBuffer = new byte[64 * packets]; // Each packet needs to be 64 bytes
@@ -192,23 +138,5 @@ namespace Calambri.Core
         }
 
         // TODO: Dispose function to release USB device
-    }
-
-    public class OPCFadecandy: IFadecandyDevice
-    {
-        public override Color GetPixel(int pixelNum)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void SetPixel(int pixelNum, Color c)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Commit()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -42,11 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Working.cs" />
+    <Compile Include="USBFadecandy.cs" />
+    <Compile Include="OPCFadecandy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calambri.Interfaces\Calambri.Interfaces.csproj">
+      <Project>{978a9842-f471-40bd-8cdf-ce8cbc1a29c8}</Project>
+      <Name>Calambri.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
