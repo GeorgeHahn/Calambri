@@ -43,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compositor.cs" />
+    <Compile Include="Notifier\Notification.cs" />
+    <Compile Include="Notifier\NotificationRenderer.cs" />
+    <Compile Include="Notifier\Notifier.cs" />
+    <Compile Include="Notifier\TestNotifier.cs" />
     <Compile Include="PixelBuffer.cs" />
     <Compile Include="Renderer.cs" />
     <Compile Include="SimpleRenderer.cs" />

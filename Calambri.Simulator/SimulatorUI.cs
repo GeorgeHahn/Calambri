@@ -13,8 +13,8 @@ namespace Calambri.Simulator
 {
     public partial class SimulatorUI : Form
     {
-        private Bitmap image;
-        private int pixelCount;
+        private readonly Bitmap image;
+        private readonly int pixelCount;
 
         public SimulatorUI(int pixelCount)
         {   
