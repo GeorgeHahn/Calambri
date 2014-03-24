@@ -20,8 +20,11 @@ namespace Calambri.Simulator
         {   
             InitializeComponent();
 
+            Width = pixelCount / 2 + 100;
+            Height = pixelCount / 2 + 100;
+
             this.pixelCount = pixelCount;
-            image = new Bitmap(pixelCount/4 + 1, pixelCount/4 + 1);
+            image = new Bitmap(pixelCount + 1, pixelCount + 1);
             pictureBox1.Image = image;
         }
 
@@ -61,13 +64,20 @@ namespace Calambri.Simulator
 
         public Color GetPixel(int pixelNum)
         {
-            var color = image.GetPixel(PixNumToX(pixelNum), PixNumToY(pixelNum));
+            var color = image.GetPixel(PixNumToX(pixelNum) * 2, PixNumToY(pixelNum) * 2);
             return new Color(color.R, color.G, color.B);
         }
 
         public void SetPixel(int pixelNum, Color color)
         {
-            image.SetPixel(PixNumToX(pixelNum), PixNumToY(pixelNum), System.Drawing.Color.FromArgb(color.R, color.G, color.B));
+            var x = PixNumToX(pixelNum)*2;
+            var y = PixNumToY(pixelNum)*2;
+            var c = System.Drawing.Color.FromArgb(color.R, color.G, color.B);
+
+            image.SetPixel(x, y, c);
+            image.SetPixel(x+1, y, c);
+            image.SetPixel(x, y+1, c);
+            image.SetPixel(x+1, y+1, c);
         }
 
         public void Commit()

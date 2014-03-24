@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compositor.cs" />
+    <Compile Include="PixelBuffer.cs" />
+    <Compile Include="Renderer.cs" />
+    <Compile Include="SimpleRenderer.cs" />
     <Compile Include="USBFadecandy.cs" />
     <Compile Include="OPCFadecandy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -81,6 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Calambri.Core\Calambri.Core.csproj">
+      <Project>{3218E4F0-87B6-4B8C-97A1-81A294E70C07}</Project>
+      <Name>Calambri.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Calambri.Interfaces\Calambri.Interfaces.csproj">
       <Project>{978A9842-F471-40BD-8CDF-CE8CBC1A29C8}</Project>
       <Name>Calambri.Interfaces</Name>
