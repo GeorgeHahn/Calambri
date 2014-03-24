@@ -43,15 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compositor.cs" />
-    <Compile Include="Notifier\Notification.cs" />
-    <Compile Include="Notifier\NotificationRenderer.cs" />
-    <Compile Include="Notifier\Notifier.cs" />
-    <Compile Include="Notifier\TestNotifier.cs" />
-    <Compile Include="PixelBuffer.cs" />
-    <Compile Include="Renderer.cs" />
+    <Compile Include="Devices\OPCFadecandy.cs" />
+    <Compile Include="Devices\USBFadecandy.cs" />
+    <Compile Include="Renderers\Notifications\Notification.cs" />
+    <Compile Include="Renderers\Notifications\NotificationRenderer.cs" />
+    <Compile Include="Renderers\Notifications\Notifier.cs" />
+    <Compile Include="Renderers\Notifications\TestNotifier.cs" />
     <Compile Include="SimpleRenderer.cs" />
-    <Compile Include="USBFadecandy.cs" />
-    <Compile Include="OPCFadecandy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +61,7 @@
       <Name>Calambri.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

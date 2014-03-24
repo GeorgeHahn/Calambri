@@ -1,4 +1,4 @@
-namespace Calambri.Core.Notifier
+namespace Calambri.Core.Renderers.Notifications
 {
     public abstract class Notifier
     {

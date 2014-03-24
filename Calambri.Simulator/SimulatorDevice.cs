@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Calambri.Core;
-using Calambri.Core.Notifier;
+using Calambri.Core.Renderers.Notifications;
 using Calambri.Interfaces;
-using Calambri.Simulator;
 
 namespace Calambri.Simulator
 {

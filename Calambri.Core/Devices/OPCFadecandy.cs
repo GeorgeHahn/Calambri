@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using Calambri.Interfaces;
 
-namespace Calambri.Core
+namespace Calambri.Core.Devices
 {
     public class OPCFadecandy: IFadecandyDevice
     {

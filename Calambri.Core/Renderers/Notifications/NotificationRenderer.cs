@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using Calambri.Interfaces;
 
-namespace Calambri.Core.Notifier
+namespace Calambri.Core.Renderers.Notifications
 {
     public class NotificationRenderer : Renderer
     {

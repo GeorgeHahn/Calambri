@@ -1,7 +1,7 @@
 using System;
 using Calambri.Interfaces;
 
-namespace Calambri.Core.Notifier
+namespace Calambri.Core.Renderers.Notifications
 {
     public class TestNotifier : Notifier
     {

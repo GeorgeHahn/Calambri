@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using Calambri.Interfaces;
 
-namespace Calambri.Core
+namespace Calambri.Interfaces
 {
     public class PixelBuffer
     {

@@ -5,7 +5,7 @@ using Calambri.Interfaces;
 using LibUsbDotNet;
 using LibUsbDotNet.Main;
 
-namespace Calambri.Core
+namespace Calambri.Core.Devices
 {
     public class USBFadecandy: IFadecandyDevice
     {

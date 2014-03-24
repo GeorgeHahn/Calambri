@@ -1,4 +1,4 @@
-namespace Calambri.Core
+namespace Calambri.Interfaces
 {
     public abstract class Renderer
     {
