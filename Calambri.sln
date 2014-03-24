@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Tests", "Calambri.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Simulator", "Calambri.Simulator\Calambri.Simulator.csproj", "{A5EA3DAC-CEB8-4260-A749-7138EFDA019D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Console", "Calambri.Console\Calambri.Console.csproj", "{58CA68B8-CF9B-48D1-A889-39735DDEF00F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{A5EA3DAC-CEB8-4260-A749-7138EFDA019D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5EA3DAC-CEB8-4260-A749-7138EFDA019D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5EA3DAC-CEB8-4260-A749-7138EFDA019D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58CA68B8-CF9B-48D1-A889-39735DDEF00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58CA68B8-CF9B-48D1-A889-39735DDEF00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58CA68B8-CF9B-48D1-A889-39735DDEF00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58CA68B8-CF9B-48D1-A889-39735DDEF00F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

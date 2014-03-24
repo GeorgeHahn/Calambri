@@ -17,11 +17,12 @@ namespace Calambri.Simulator
         private int pixelCount;
 
         public SimulatorUI(int pixelCount)
-        {
+        {   
             InitializeComponent();
 
             this.pixelCount = pixelCount;
             image = new Bitmap(pixelCount/4 + 1, pixelCount/4 + 1);
+            pictureBox1.Image = image;
         }
 
         int PixNumToX(int pixelNum)
@@ -32,7 +33,7 @@ namespace Calambri.Simulator
             if (side == 0) // Top side
                 return pixel;
             if (side == 2) // Bottom  side
-                return -pixel;
+                return pixelCount / 4 - pixel;
 
             if (side == 1) // Right side
                 return pixelCount/4;
@@ -54,7 +55,7 @@ namespace Calambri.Simulator
             if (side == 1) // Right side
                 return pixel;
             if (side == 3) // Left side
-                return -pixel;
+                return pixelCount / 4 - pixel;
             return 0;
         }
 
@@ -71,7 +72,7 @@ namespace Calambri.Simulator
 
         public void Commit()
         {
-            
+            BeginInvoke(new MethodInvoker(Refresh));
         }
     }
 }
