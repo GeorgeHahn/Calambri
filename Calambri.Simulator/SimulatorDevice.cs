@@ -11,17 +11,17 @@ namespace Calambri.Simulator
     {
         public static void Main()
         {
-            SimulatorDevice d = new SimulatorDevice(240 * 4);
+            var simulatorDevice = new SimulatorDevice(240 * 4);
 
             // Run algorithms
             Task.Run(() =>
             {
                 Thread.Sleep(150); // Try not to annoy winforms (agh why did I use winforms)
 
-                var r = new SimpleRenderer();
-                var n = new NotificationRenderer(new TestNotifier());
-                var x = new FlatColorRenderer(new Color(0, 255, 0, 0));
-                Compositor c = new Compositor(new[] { d }, new Renderer[] { r, n });
+                var abstractColors = new SimpleRenderer();
+                var notifications = new NotificationRenderer(new TestNotifier());
+                var flat = new FlatColorRenderer(new Color(0, 255, 0, 192));
+                Compositor c = new Compositor(new[] { simulatorDevice }, new Renderer[] { abstractColors, notifications, flat });
 
                 while (true)
                 {
@@ -30,7 +30,7 @@ namespace Calambri.Simulator
                 }
             });
 
-            Application.Run(d.sim);
+            Application.Run(simulatorDevice.sim);
         }
     }
 
