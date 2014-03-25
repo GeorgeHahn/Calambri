@@ -1,8 +1,10 @@
 using System;
+using System.Diagnostics;
 
 namespace Calambri.Interfaces
 {
     // TODO: Should make this structure immutable
+    [DebuggerDisplay("{R}, {G}, {B} | {A}")]
     public struct Color
     {
         public byte R;
