@@ -10,9 +10,17 @@ namespace Calambri.Weather
 {
     public class WeatherRenderer : Renderer
     {
-        private bool weatherIsFresh = false;
         private List<Color> segments;
         private int segmentLength;
+        private int segmentExtra;
+        private DateTime weatherTime;
+        private List<string> conditions; 
+
+        private bool weatherIsFresh()
+        {
+            return weatherTime != DateTime.MinValue && // Weather fetched at least once
+                (weatherTime.AddHours(1) < DateTime.Now); // Weather was refreshed in the last hour
+        }
 
         private void GetWeather()
         {
@@ -24,12 +32,15 @@ namespace Calambri.Weather
 
             var segmentCount = forecast.Length;
             segmentLength = PixelCount / segmentCount; // TODO: Evenly distribute extra pixels
+            segmentExtra = PixelCount % segmentCount;
             segments = new List<Color>(segmentCount); // TODO: Animated patterns?
+            conditions = new List<string>(segmentCount);
 
             // See full list of conditions at http://www.wunderground.com/weather/api/d/docs?d=resources/phrase-glossary#current_condition_phrases
             foreach (var hour in forecast)
             {
                 var condition = hour.Condition;
+                conditions.Add(condition);
 
                 //Unknown Precipitation
                 //Unknown
@@ -39,7 +50,7 @@ namespace Calambri.Weather
                 //Clear
                 if (condition.Contains("Clear"))
                 {
-                    thisSegment = new Color(242, 238, 126);
+                    thisSegment = new Color(255, 255, 0);
                 }
 
                 //Squalls
@@ -123,6 +134,8 @@ namespace Calambri.Weather
                 {
                     thisSegment = new Color(227, 204, 150);
                 }
+
+                segments.Add(thisSegment);
             }
         }
 
@@ -130,6 +143,21 @@ namespace Calambri.Weather
         {
             buffer.Clear();
 
+            if(!weatherIsFresh())
+                GetWeather();
+
+            int pos = 0;
+            var thisSegLen = 0;
+            var extraPixels = segmentExtra;
+            foreach (var segment in segments)
+            {
+                thisSegLen = segmentLength + (extraPixels > 0 ? 1 : 0); // Pad an extra pixel to fill display
+                buffer.DrawSegment(pos, segment, thisSegLen);
+                pos += thisSegLen;
+
+                if (extraPixels > 0)
+                    extraPixels--;
+            }
 
             return buffer;
         }
