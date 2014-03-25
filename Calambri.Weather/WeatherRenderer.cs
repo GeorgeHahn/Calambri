@@ -24,7 +24,7 @@ namespace Calambri.Weather
 
         private void GetWeather()
         {
-            // TODO: Gonna need some configuration to provide API keys and location infomation (etc) from config
+            // TODO: Gonna need some configuration to provide API keys and location information (etc) from config
             // Will regenerate this key later if necessary
 
             WApi weather = new WApi("af110fd8db184115");
@@ -45,7 +45,6 @@ namespace Calambri.Weather
                 //Unknown Precipitation
                 //Unknown
                 Color thisSegment = new Color(0, 0, 0, 0);
-
 
                 //Clear
                 if (condition.Contains("Clear"))
@@ -146,12 +145,11 @@ namespace Calambri.Weather
             if(!weatherIsFresh())
                 GetWeather();
 
-            int pos = 0;
-            var thisSegLen = 0;
+            var pos = 0;
             var extraPixels = segmentExtra;
             foreach (var segment in segments)
             {
-                thisSegLen = segmentLength + (extraPixels > 0 ? 1 : 0); // Pad an extra pixel to fill display
+                var thisSegLen = segmentLength + (extraPixels > 0 ? 1 : 0);
                 buffer.DrawSegment(pos, segment, thisSegLen);
                 pos += thisSegLen;
 
