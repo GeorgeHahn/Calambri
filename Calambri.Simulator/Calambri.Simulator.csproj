@@ -93,6 +93,10 @@
       <Project>{01481fea-b34a-40a4-8be0-643b80aa90f1}</Project>
       <Name>Calambri.SocialNotifications</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Calambri.Weather\Calambri.Weather.csproj">
+      <Project>{891b2523-f86b-44c0-b9ad-568da0baab54}</Project>
+      <Name>Calambri.Weather</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

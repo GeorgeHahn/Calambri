@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Simulator", "Calam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.SocialNotifications", "Calambri.SocialNotifications\Calambri.SocialNotifications.csproj", "{01481FEA-B34A-40A4-8BE0-643B80AA90F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Weather", "Calambri.Weather\Calambri.Weather.csproj", "{891B2523-F86B-44C0-B9AD-568DA0BAAB54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{01481FEA-B34A-40A4-8BE0-643B80AA90F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01481FEA-B34A-40A4-8BE0-643B80AA90F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01481FEA-B34A-40A4-8BE0-643B80AA90F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891B2523-F86B-44C0-B9AD-568DA0BAAB54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891B2523-F86B-44C0-B9AD-568DA0BAAB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891B2523-F86B-44C0-B9AD-568DA0BAAB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891B2523-F86B-44C0-B9AD-568DA0BAAB54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
