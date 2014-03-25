@@ -2,8 +2,10 @@
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Calambri.Core;
+using Calambri.Core.Renderers;
 using Calambri.Core.Renderers.Notifications;
 using Calambri.Interfaces;
+using Calambri.SocialNotifications;
 
 namespace Calambri.Simulator
 {
@@ -19,7 +21,7 @@ namespace Calambri.Simulator
                 Thread.Sleep(150); // Try not to annoy winforms (agh why did I use winforms)
 
                 var abstractColors = new SimpleRenderer();
-                var notifications = new NotificationRenderer(new TestNotifier());
+                var notifications = new NotificationRenderer(new TwitterNotifier()); // new TestNotifier()
                 var flat = new FlatColorRenderer(new Color(0, 255, 0, 192));
                 Compositor c = new Compositor(new[] { simulatorDevice }, new Renderer[] { abstractColors, notifications, flat });
 
@@ -38,7 +40,8 @@ namespace Calambri.Simulator
     {
         public SimulatorUI sim;
 
-        public SimulatorDevice(int pixelCount) : base(pixelCount)
+        public SimulatorDevice(int pixelCount)
+            : base(pixelCount)
         {
             sim = new SimulatorUI(pixelCount);
         }

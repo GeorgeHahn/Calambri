@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5EA3DAC-CEB8-4260-A749-7138EFDA019D}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{01481FEA-B34A-40A4-8BE0-643B80AA90F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Calambri.Simulator</RootNamespace>
-    <AssemblyName>Calambri.Simulator</AssemblyName>
+    <RootNamespace>Calambri.SocialNotifications</RootNamespace>
+    <AssemblyName>Calambri.SocialNotifications</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,16 +22,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -41,44 +36,11 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimulatorUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SimulatorUI.Designer.cs">
-      <DependentUpon>SimulatorUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SimulatorDevice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="SimulatorUI.resx">
-      <DependentUpon>SimulatorUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="TwitterNotifier.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Calambri.Core\Calambri.Core.csproj">
@@ -88,10 +50,6 @@
     <ProjectReference Include="..\Calambri.Interfaces\Calambri.Interfaces.csproj">
       <Project>{978A9842-F471-40BD-8CDF-CE8CBC1A29C8}</Project>
       <Name>Calambri.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Calambri.SocialNotifications\Calambri.SocialNotifications.csproj">
-      <Project>{01481fea-b34a-40a4-8be0-643b80aa90f1}</Project>
-      <Name>Calambri.SocialNotifications</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

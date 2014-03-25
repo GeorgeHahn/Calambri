@@ -45,11 +45,12 @@
     <Compile Include="Compositor.cs" />
     <Compile Include="Devices\OPCFadecandy.cs" />
     <Compile Include="Devices\USBFadecandy.cs" />
+    <Compile Include="Renderers\FlatColorRenderer.cs" />
     <Compile Include="Renderers\Notifications\Notification.cs" />
     <Compile Include="Renderers\Notifications\NotificationRenderer.cs" />
     <Compile Include="Renderers\Notifications\Notifier.cs" />
     <Compile Include="Renderers\Notifications\TestNotifier.cs" />
-    <Compile Include="SimpleRenderer.cs" />
+    <Compile Include="Renderers\SimpleRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
