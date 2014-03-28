@@ -6,13 +6,13 @@ namespace Calambri.Core
 {
     public class Compositor
     {
-        private readonly IFadecandyDevice[] devices;
-        private readonly Renderer[] renderers;
+        private readonly List<IFadecandyDevice> devices;
+        private readonly List<Renderer> renderers;
 
         public Compositor(IEnumerable<IFadecandyDevice> devices, IEnumerable<Renderer> renderers)
         {
-            this.devices = devices.ToArray();
-            this.renderers = renderers.ToArray();
+            this.devices = new List<IFadecandyDevice>(devices);
+            this.renderers = new List<Renderer>(renderers);
 
             var totalPixels = this.devices.Sum(device => device.PixelCount);
 
@@ -20,6 +20,21 @@ namespace Calambri.Core
             {
                 renderer.PixelCount = totalPixels;
             }
+        }
+
+        public IEnumerable<Renderer> GetRenderers()
+        {
+            return renderers;
+        }
+
+        public void AddRenderer(Renderer renderer)
+        {
+            renderers.Add(renderer);
+        }
+
+        public bool RemoveRenderer(Renderer renderer)
+        {
+            return renderers.Remove(renderer);
         }
 
         public PixelBuffer CompositeBuffers(List<PixelBuffer> buffers)
