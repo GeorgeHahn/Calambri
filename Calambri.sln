@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.SocialNotification
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.Weather", "Calambri.Weather\Calambri.Weather.csproj", "{891B2523-F86B-44C0-B9AD-568DA0BAAB54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.HttpController", "Calambri.HttpController\Calambri.HttpController.csproj", "{F2F828CE-C3F8-4A46-AD01-2FA755B8BBFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calambri.MQTTController", "Calambri.MQTTController\Calambri.MQTTController.csproj", "{D547D41F-32D4-4CF4-B6B2-0DDA87E322FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{891B2523-F86B-44C0-B9AD-568DA0BAAB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{891B2523-F86B-44C0-B9AD-568DA0BAAB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{891B2523-F86B-44C0-B9AD-568DA0BAAB54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F828CE-C3F8-4A46-AD01-2FA755B8BBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F828CE-C3F8-4A46-AD01-2FA755B8BBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F828CE-C3F8-4A46-AD01-2FA755B8BBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F828CE-C3F8-4A46-AD01-2FA755B8BBFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D547D41F-32D4-4CF4-B6B2-0DDA87E322FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D547D41F-32D4-4CF4-B6B2-0DDA87E322FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D547D41F-32D4-4CF4-B6B2-0DDA87E322FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D547D41F-32D4-4CF4-B6B2-0DDA87E322FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
